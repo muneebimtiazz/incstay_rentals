@@ -16,7 +16,7 @@ dotenv.config()
 
 //inbuild middleware
 // app.use(cors({origin:'http://localhost:5173',credentials:true}))
-app.use(cors({ origin: 'https://incstayrentals.vercel.app/', credentials: true }));
+app.use(cors({ origin: 'https://incstayrentals.vercel.app', credentials: true }));
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cookieParser());
