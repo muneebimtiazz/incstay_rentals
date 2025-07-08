@@ -19,6 +19,7 @@ const Login = () => {
       Email:email,
       Password:pass
     }
+    console.log(data)
 
   try {
         const res=await axios.post('/api/auth/login',data,{withCredentials: true})

@@ -67,7 +67,10 @@ export const login=async (req,res)=>{
         const abc =await User.login(Email,Password);
         console.log(abc)// user correct return
         const token=createToken(abc._id);
-        res.cookie('jwt',token,{maxAge:expirydate*1000,httpOnly: true});
+        res.cookie('jwt',token,{maxAge:expirydate*1000,httpOnly: true,secure:true,sameSite:'None'});
+        // error facing
+        // secure: true,        // IMPORTANT for Railway/Vercel production
+        // sameSite: 'None',    // REQUIRED for cross-origin cookie sharing
         res.status(201).json({id:abc._id})
 
     }
