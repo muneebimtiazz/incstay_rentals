@@ -46,9 +46,11 @@ const handleSubmit = async () => {
     setLoading(false)
     toast.success('Form Submitted Successfully');
     closeModal();
-    setTimeout(() => {
-      window.location.reload();
-    }, 1500);
+
+    // error on built
+    // setTimeout(() => {
+    //   window.location.reload();
+    // }, 1500);
   } catch (error) {
     console.error('Submission error:', error);
     toast.error('Please try again.');

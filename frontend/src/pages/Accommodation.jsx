@@ -24,7 +24,7 @@ const Accommodation = () => {
       }
     }
     fetch()
-  },[])
+  },[details])
 
   const dateFix=(date)=>{
     return new Date(date).toLocaleString('en')
@@ -36,7 +36,7 @@ const Accommodation = () => {
       console.log(res) 
       fetch()
       toast.success('Delete Successful')
-      window.location.reload();
+      // window.location.reload();  // error in built
     }catch(error){
         console.log(error)
       toast.error('Delete Unsuccessful')
