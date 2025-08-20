@@ -33,12 +33,12 @@ app.get('/readcookies',(req,res)=>{
 })
 
 //routes
-app.use(authRoutes)
-app.use(bookingRoutes)
-app.use(predefinedRentRoutes)
-app.use(userRoutes)
-app.use(userdefinedRentRoutes)
-app.use(uploadRoutes)
+app.use('/api', authRoutes)
+app.use('/api', bookingRoutes)
+app.use('/api', predefinedRentRoutes)
+app.use('/api', userRoutes)
+app.use('/api', userdefinedRentRoutes)
+app.use('/api', uploadRoutes)
 
 app.get('/',(req,res)=>{
     res.send('hello')

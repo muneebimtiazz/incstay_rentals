@@ -3,8 +3,8 @@ import { uploadSingle , uploadMultiple} from '../controllers/uploadControllers.j
 const router = express.Router()
 import upload from '../middlewares/multer.js'
 
-router.post('/api/upload/single',upload.single('image'),uploadSingle)
-router.post('/api/upload/multiple',upload.array('images', 10),uploadMultiple);
+router.post('/upload/single',upload.single('image'),uploadSingle)
+router.post('/upload/multiple',upload.array('images', 10),uploadMultiple);
 
 
 export default router

@@ -3,8 +3,8 @@ import { getBookings, createBooking, deleteBooking } from '../controllers/bookin
 import {requireAuth} from '../middlewares/jwtChecker.js'
 const router = express.Router()
 
-router.get('/api/bookings/me',requireAuth,  getBookings)
-router.post('/api/bookings/:id', requireAuth, createBooking)
-router.delete('/api/hotel/:hotelId/booking/:bookingId', requireAuth, deleteBooking)
+router.get('/bookings/me',requireAuth,  getBookings)
+router.post('/bookings/:id', requireAuth, createBooking)
+router.delete('/hotel/:hotelId/booking/:bookingId', requireAuth, deleteBooking)
 
 export default router

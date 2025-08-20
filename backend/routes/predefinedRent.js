@@ -3,8 +3,8 @@ import {getAllPreDefinedRents,getOnePreDefinedRent,getFilteredPreDefinedRents} f
 
 const router = express.Router()
 
-router.get('/api/predefinedRents', getAllPreDefinedRents)
-router.get('/api/predefinedRents/filter', getFilteredPreDefinedRents)
-router.get('/api/predefinedRents/:id', getOnePreDefinedRent)
+router.get('/predefinedRents', getAllPreDefinedRents)
+router.get('/predefinedRents/filter', getFilteredPreDefinedRents)
+router.get('/predefinedRents/:id', getOnePreDefinedRent)
 
 export default router
